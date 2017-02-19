@@ -1,0 +1,10 @@
++ Buttons 
+
++ Addressable LEDs
+
++ Spielmechanik
+    
+    Game-Button zum Logging
+    Logging des Spielers
+    Game-Button zum Starten der Positionierung
+    ...
