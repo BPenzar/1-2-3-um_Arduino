@@ -26,7 +26,7 @@ Adafruit_NeoPixel leds = Adafruit_NeoPixel(LED_ANZAHL, LED_PIN); // Index: 0 ==>
 uint32_t green   = leds.Color(255, 0, 0);
 uint32_t red     = leds.Color(0, 255, 0);
 uint32_t blue    = leds.Color(0, 0, 255);
-uint32_t white   = leds.Color(255, 255, 255);
+uint32_t white   = leds.Color(248,180,255); // An eigene LEDs anpassen
 uint32_t aus     = leds.Color(0, 0, 0);
 
 //--------------------------- Speaker + IR Sensor --------------------------- 
