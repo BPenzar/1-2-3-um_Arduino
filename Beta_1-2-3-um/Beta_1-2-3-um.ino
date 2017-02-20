@@ -308,18 +308,18 @@ void changeLight() {
 
 
 // IR-SENSOR Lesung (Durchschnitt)
-/* Durchschnitt aus den letzten 5 Messwerten (um Messungenauigkeiten vorzubeugen)
+/* Durchschnitt aus den letzten 10 Messwerten (um Messungenauigkeiten vorzubeugen)
  * IRREAD() => 250 MS! */
 int irRead() {
     averaging = 0;
-    for (int i=0; i<=10; i++) { // IR-Sensor_Wert Einlesen (5x)
+    for (int i=0; i<=10; i++) { // IR-Sensor_Wert Einlesen (10x)
         distance = analogRead(irSense);
         averaging = averaging + distance;
-        delay(55);      /*  50 ms zwischen Lesewerten warten.
+        delay(55);      /*  55 ms zwischen Lesewerten warten.
                           According to datasheet time between each read
                           is -38ms +/- 10ms. */
     }
-    distance = averaging / 5;       // Durchschnitt der Lesewerte in distance
+    distance = averaging / 10;       // Durchschnitt der Lesewerte in distance
     return(distance);               // Rückgabewert
 }
 
